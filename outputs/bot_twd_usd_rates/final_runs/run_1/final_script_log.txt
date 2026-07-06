@@ -1,0 +1,7 @@
+step 1 action: Navigate to 臺灣銀行牌告匯率 page. Title: 臺灣銀行牌告匯率
+step 2 action: Located USD row in the exchange rate table
+step 3 action: USD 現金買入 (Cash Buying) rate: 31.625
+step 4 action: USD 現金賣出 (Cash Selling) rate: 32.295
+
+FINAL_RESPONSE: 美金 (USD) 現金買入匯率: 31.625, 現金賣出匯率: 32.295
+step 5 action: Final datum recorded: 美金 (USD) 現金買入匯率: 31.625, 現金賣出匯率: 32.295
