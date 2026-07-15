@@ -29,7 +29,7 @@ def main():
       articles: list[Locator] = page.locator("div.r-ent div.title a").all()
       print(f"文章數量: {len(articles)}")
 
-      # 取出前 5 篇的文章標題並印出
+      # 取出文章標題並印出
       for article in articles[-5:]:
           print(f"  - {article.inner_text()}")
 
