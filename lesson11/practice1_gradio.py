@@ -2,6 +2,7 @@ from datetime import datetime
 from pathlib import Path
 
 import gradio as gr
+from gradio.themes import Soft
 from playwright.sync_api import sync_playwright, Playwright, Browser, Page
 
 # 截圖存放資料夾
@@ -25,7 +26,7 @@ def search_wikipedia(page: Page, keyword: str) -> str:
   return str(shot_path)
 
 
-def get_search_result(page: Page) -> dict:
+def get_search_result(page: Page) -> dict[str, str]:
   """擷取搜尋結果頁面的標題與摘要"""
   heading: str = page.locator("#firstHeading").inner_text()
   elements = page.locator("#mw-content-text p")
@@ -78,7 +79,7 @@ footer { visibility: hidden; }
 
 with gr.Blocks(
   title="維基百科搜尋爬蟲",
-  theme=gr.themes.Soft(primary_hue="violet", secondary_hue="pink"),
+  theme=Soft(primary_hue="violet", secondary_hue="pink"),
   css=CUSTOM_CSS,
 ) as demo:
 
